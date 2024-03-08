@@ -1,5 +1,5 @@
 #include <ModbusRTUSlave.h>
-#include <DHT.h>
+#include <DHT.h> //Versi Adafruit Coeg
 
 #define RELAY 26
 #define LED1 32
