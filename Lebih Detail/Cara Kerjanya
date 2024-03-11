@@ -1,0 +1,20 @@
+Data disimpan pada Slave Device dalam bentuk 4 'table'. setiap table ber kapasitas 9999 Nilai(10k minus 1)
+2 untuk Discrete Value (Coils)
+  setiap coil/contact berisi '1 bit' dan ditugaskan pada alamat 0000 sampai 270E.
+2 untuk Nilai Ankga (Register), terbagi menjadi:
+  a. Read-Only
+  b. Read-Write
+  Setiap register berisi 1 ASCII(2bytes) dan ditugaskan pada alamat 0000 sampai 270E.
+
+Tabel :
+1. Output Coil/Contact "Read-Write"
+2. Input Coil/Contact "Read-Only"
+3. Input Analog Register "Read-Only"
+4. Output Analog Holding Register "Read-Write"
+
+Contoh :
+Register penampung Pertama (1st Holding Register) = 40001 dengan Data Addres 0000.
+
+Frame Data Modbus :
+ # Master : Slave ID Address(1byte) + Function Code(1byte) + Start Addres + Informasi + CRC 16(wbyte).
+ # Slave  : Slave ID Address(1byte) + Function Code(1byte) + Count Byte + Data + CRC16(2Byte)
