@@ -1,3 +1,10 @@
+/*
+Membaca nilai sensor XY-MD02 menggunakan ESP8266 yang terintegrasi dengan uart_RS485 pada pin
+RX = 12/D6
+TX = 14/D5
+dengan supply uart_rs485 3.3 VOLT
+*/
+
 #include <ModbusMaster.h>
 #include <SoftwareSerial.h>
 SoftwareSerial SwSerial(12, 14);  //ESP8266 (D6,D5) RX,TX
