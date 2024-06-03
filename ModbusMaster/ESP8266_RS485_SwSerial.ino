@@ -11,7 +11,8 @@ float temp, humi;
 
 void setup() {
   Serial.begin(9600);
-  SwSerial.begin(9600, SWSERIAL_8N1);//baud rate slave modbus
+  //SwSerial.begin(9600, SWSERIAL_8N1);//baud rate slave modbus
+  SwSerial.begin(9600); //juga bisa
   node1.begin(1, SwSerial);//1 = slave id pzem016
 }
 
